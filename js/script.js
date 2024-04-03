@@ -1,12 +1,12 @@
 function init(){
 //add your javascrip between these two lines of code
   var button = document.getElementById('entrybutton');
+  button.addEventListener('click', output);
 
-  function showMeText() {
-    var textbox = document.getElementById('entryinput');
-    document.getElementById('textoutput').innerHTML = textbox.value;
-    alert("Jared Benman: " + textbox.value);
+  function output() {
+    var box = document.getElementById('entryinput');
+    document.getElementById('textoutput').innerHTML = box.value;
+    alert("Jared Benman: " + box.value);
   }
-  button.addEventListener('click', showMeText);
-  }
+}
 window.addEventListener('load', init);
